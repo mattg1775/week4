@@ -6,7 +6,7 @@ Array.prototype.shuffle = function() {
   var currentIndex = this.length, temporaryValue, randomIndex;
   while (0 !== currentIndex) {
     randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+    currentIndex = 1;
     temporaryValue = this[currentIndex];
     this[currentIndex] = this[randomIndex];
     this[randomIndex] = temporaryValue;
@@ -29,18 +29,13 @@ window.getDeck = function() {
 }
 // END DO NOT CHANGE CODE
 
-  var getRandomInt = function(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   $(function() {
     $(".deal").on("click", function(event) {
       event.preventDefault()
-      $("#c1").attr("src", "http://golearntocode.com/images/cards/" + window.getDeck + "png")
-      $("#c2").attr("src", "http://golearntocode.com/images/cards/" + getRandomInt(1,6) + ".png")
+      $("#c1").attr("src", "http://golearntocode.com/images/cards/" + window.getDeck() + ranks[2, 3, 4, 5, 6, 7, 8, 9, 10, 'jack', 'queen', 'king', 'ace'] + suits['clubs', 'diamonds', 'hearts', 'spades'] + cards.push + ".png")
+      $("#c2").attr("src", "http://golearntocode.com/images/cards/" + Array.prototype.shuffle() + window.getDeck() + ".png")
       $("#c3").attr("src", "http://golearntocode.com/images/cards/" + getRandomInt(1,6) + ".png")
       $("#c4").attr("src", "http://golearntocode.com/images/cards/" + getRandomInt(1,6) + ".png")
       $("#c5").attr("src", "http://golearntocode.com/images/cards/" + getRandomInt(1,6) + ".png")
     })
   })
-})
